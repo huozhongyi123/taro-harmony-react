@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { View, Text, Textarea } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import './index.css'
 
@@ -34,9 +34,36 @@ export default class Index extends Component {
     //     console.log(JSON.stringify(res) + 'hide')
     //   })
     // }, 1000)
+    Taro.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      },
+      cancel(e) {
+        console.log(JSON.stringify(e))
+      },
+      complete: (res) => {
+        console.log(JSON.stringify(res) + 'complete')
+      }
+    }).then(res => {
+      console.log(JSON.stringify(res) + 'resolve')
+      if (res.confirm) {
+        console.log('用户点击确定resolve')
+      } else if (res.cancel) {
+        console.log('用户点击取消resolve')
+      }
+    })
     // Taro.showModal({
     //   title: '提示',
     //   content: '这是一个模态弹窗',
+    //   confirmText: '11',
+    //   confirmColor: '#ffffff',
+    //   cancelText: '22',
     //   success: function (res) {
     //     if (res.confirm) {
     //       console.log('用户点击确定')
@@ -53,28 +80,6 @@ export default class Index extends Component {
     // }).then(res => {
     //   console.log(JSON.stringify(res) + 'resolve')
     // })
-    Taro.showModal({
-      title: '提示',
-      content: '这是一个模态弹窗',
-      confirmText: '11',
-      confirmColor: '#ffffff',
-      cancelText: '22',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      },
-      cancel(e) {
-        console.log(JSON.stringify(e))
-      },
-      complete: (res) => {
-        console.log(JSON.stringify(res) + 'complete')
-      }
-    }).then(res => {
-      console.log(JSON.stringify(res) + 'resolve')
-    })
     // Taro.showActionSheet({
     //   itemList: ['A', 'B', 'C'],
     //   success: function (res) {
