@@ -11,26 +11,15 @@ export default class Index extends Component {
     }
   }
 
-  componentWillMount () {
-    
-  }
+  componentWillMount () { }
 
-  componentDidMount () {
-    
-  }
+  componentDidMount () { }
 
   componentWillUnmount () { }
 
-  componentDidShow () {
-    
-    
-    
-  
-  }
+  componentDidShow () { }
 
   componentDidHide () { }
-
-  
 
   render () {
     return (
