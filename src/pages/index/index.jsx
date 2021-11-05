@@ -128,10 +128,11 @@ export default class Index extends Component {
           Taro.showActionSheet({
             itemList: ['A', 'B', 'C'],
             success: function (res) {
+              console.log(JSON.stringify(res))
               console.log(res.tapIndex)
             },
             fail: function (res) {
-              console.log(res)
+              console.log(JSON.stringify(res))
             },
             complete: (res) => {
               console.log(JSON.stringify(res) + 'complete')
@@ -146,11 +147,12 @@ export default class Index extends Component {
           Taro.showActionSheet({
             itemList: ['A', 'B', 'C'],
             itemColor: '#FE6F02',
-            success: function (res) {
+            success: (res) => {
+              console.log(JSON.stringify(res))
               console.log(res.tapIndex)
             },
-            fail: function (res) {
-              console.log(res)
+            fail: (res) => {
+              console.log(JSON.stringify(res))
             },
             complete: (res) => {
               console.log(JSON.stringify(res) + 'complete')
