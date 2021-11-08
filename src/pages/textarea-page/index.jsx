@@ -57,7 +57,7 @@ export default class Index extends Component {
         {/* 部分事件无法在虚拟键盘上验证 keyboardheightchange onTranslate onShare onOptionselect menuoptions onSelectchange */}
 
         {/* 属性正常 */}
-        {/* <View className='label'>
+        <View className='label'>
           <Text>基础</Text>
         </View>
         <View className='label'>
@@ -85,7 +85,7 @@ export default class Index extends Component {
             placeholder='3粉丝'
             showcounter
           />
-        </View> */}
+        </View>
         {/* <View className='label'>
           <Text>headericon</Text>
         </View>
@@ -235,7 +235,7 @@ export default class Index extends Component {
             console.log(JSON.stringify(e))
           }}
         /> */}
-        <Text>onSearch</Text>
+        {/* <Text>onSearch</Text>
         <Textarea 
           value=''
           onSearch={(e) => {
@@ -256,7 +256,7 @@ export default class Index extends Component {
           onSelectchange={(e) => {
             console.log(JSON.stringify(e))
           }}
-        />
+        /> */}
       </View>
     )
   }
