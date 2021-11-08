@@ -10,13 +10,14 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: path.join(__dirname, '../../MyApplicationDemo/entry/src/main/js/default'),
+  outputRoot: path.join(__dirname, '../../hawley_taro_project/entry/src/main/js/default'),
   // outputRoot: 'dist',
   plugins: ['@tarojs/plugin-platform-harmony'],
   defineConstants: {
   },
   copy: {
     patterns: [
+      { from: 'src/common/search.svg', to: '../../hawley_taro_project/entry/src/main/js/default/static/favicon.ico' }
     ],
     options: {
     }

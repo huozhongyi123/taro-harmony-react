@@ -24,7 +24,7 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Text onClick={() => { Taro.navigateTo({ url: '/pages/textarea-page/index' }) }}>Hello world!</Text>
         <Text className='button' onClick={() => {
           Taro.showToast({
             title: '1212',
