@@ -1,0 +1,17 @@
+.index {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 750px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoverNaviagter {
+  background-color: #000000;
+  transition: all linear 0.2s;
+}

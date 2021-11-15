@@ -7,6 +7,7 @@ export default class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      valuec: '32323',
       value: 'defaultValue',
       textvalue: '11',
       textfocus: '',
@@ -18,11 +19,17 @@ export default class Index extends Component {
 
   componentWillMount () { }
 
-  componentDidMount () { }
+  componentDidMount () {
+    
+  }
 
   componentWillUnmount () { }
 
-  componentDidShow () { }
+  componentDidShow () {
+    setTimeout(() => {
+      this.setState({ valuec: 'fsdfsdf' })
+    }, 2000)
+  }
 
   componentDidHide () { }
 
@@ -63,7 +70,8 @@ export default class Index extends Component {
         <View className='label'>
           <Textarea 
             className='textarea'
-            value='232'
+            value={this.state.valuec}
+            disabled
           />
         </View>
         <View className='label'>
@@ -73,6 +81,7 @@ export default class Index extends Component {
           <Textarea 
             value=''
             placeholder='3粉丝'
+            disabled
           />
          </View>
         <View className='label'>
